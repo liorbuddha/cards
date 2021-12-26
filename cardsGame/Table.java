@@ -31,13 +31,12 @@ package cardsGame;
 	public int cardsLeft() {
 		return this.deck.getDeckLength();
 	}
-	public void play() {
+	//run game
+	public void play_war() {
 		dealCards(52/this.players.length);
-		
 		int loc=0, pl=0;
 		for(int round=0;round<52/this.players.length;round++) {
 			int max = 0;
-			
 			for(pl =0;pl<this.players.length;pl++) {
 				this.players[pl].printHand();
 				if(max<this.players[pl].firstInHand().getValue()) {
@@ -45,7 +44,6 @@ package cardsGame;
 					loc = pl;
 				}
 			}
-			
 			System.out.println("winner for round "+round+" is: "+this.players[loc].toString()+" with "+this.players[loc].firstInHand());
 			for(int i=0;i<this.players.length;i++) {
 				this.players[i].PullCardFromHand();
