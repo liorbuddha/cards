@@ -10,11 +10,7 @@ public class test {
 		}
 		Table tb = new Table(players_list);
 		tb.shuffleDeck();
-		tb.dealCards(cardsEach);
-		for(int i=0;i<players_list.length;i++) {
-			System.out.print(players_list[i].toString());
-			players_list[i].printHand();
-		}
+		tb.play();
 		System.out.println(tb.cardsLeft()+" cards left in the deck");
 		
 	}
