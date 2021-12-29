@@ -1,4 +1,6 @@
-# cards
-add players to table,
-shuffle deck of cards,
-deal cards to players.
+# CARDS
+-----Deck:
+shuffle, pull card, cards out of the deck, 
+-----Player:
+cards in hand, throw hand, sum of cards values in hand, first card in hand
+-----Table:
