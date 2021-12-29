@@ -66,6 +66,24 @@ public class Player {
 	public Card firstInHand() {
 		return this.hand[0];
 	}
+	//returns sum of values of cards from this.hand
+	public int getSumHand() {
+		int sum = 0;
+		for(int i=0;i<this.hand.length;i++) {
+			if(this.hand[i].getValue()+2<10) {
+				sum+=10;
+			}
+			else {
+				sum+=this.hand[i].getValue()+2;
+			}
+			
+		}
+		return sum;
+	}
+	//throw hand. set hand to empty Card[]
+	public void throwHand() {
+		this.hand=new Card[0];
+	}
 	
 	
 }
